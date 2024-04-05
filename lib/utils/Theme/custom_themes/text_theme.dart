@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+///custom theme for text class
 class VTextTheme{
   VTextTheme._(); ///used so can only be called from same class
 
