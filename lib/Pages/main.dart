@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:vadhyantram/utils/Theme/theme.dart';
+import '../Config/app_routes.dart';
+import '../utils/Theme/theme.dart';
 
-import 'login_page.dart';
 
 void main(){
 runApp(const App());
@@ -16,10 +16,10 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: VAppTheme.lightTheme,
       darkTheme: VAppTheme.darkTheme,
-    ),
-    routes:{
-      '/': (context) => LoginPage();
-    }
-   initialRoute: '/',
+
+      initialRoute : AppRoutes.login,
+      routes: AppRoutes.pages,
+    );
+
   }
 }
