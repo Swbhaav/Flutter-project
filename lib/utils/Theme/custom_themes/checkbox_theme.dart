@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../constants/colors.dart';
+
 ///Custom Theme for checkbox class
 class VCheckboxTheme{
   VCheckboxTheme._();
@@ -9,14 +11,14 @@ class VCheckboxTheme{
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4),),
     checkColor: MaterialStateProperty.resolveWith((states){
       if(states.contains(MaterialState.selected)){
-        return Colors.white;
+        return VColors.white;
       }else{
-        return Colors.black;
+        return VColors.black;
       }
     },),
     fillColor: MaterialStateProperty.resolveWith((states) {
       if(states.contains(MaterialState.selected)){
-        return Colors.blue;
+        return VColors.buttonPrimary;
       }else{
         return Colors.transparent;
       }
@@ -28,14 +30,14 @@ class VCheckboxTheme{
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4),),
       checkColor: MaterialStateProperty.resolveWith((states){
         if(states.contains(MaterialState.selected)){
-          return Colors.white;
+          return VColors.white;
         }else{
-          return Colors.black;
+          return VColors.black;
         }
       },),
       fillColor: MaterialStateProperty.resolveWith((states) {
         if(states.contains(MaterialState.selected)){
-          return Colors.blue;
+          return VColors.buttonPrimary;
         }else{
           return Colors.transparent;
         }
