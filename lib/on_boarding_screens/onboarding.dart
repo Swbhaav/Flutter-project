@@ -4,6 +4,8 @@ import 'package:vadhyantram/intro_pages/introPage1.dart';
 import 'package:vadhyantram/intro_pages/introPage2.dart';
 import 'package:vadhyantram/intro_pages/introPage3.dart';
 
+import '../login/login_page.dart';
+
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
 
@@ -61,7 +63,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       ? GestureDetector(
                           onTap: () {
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return login();
+                              return LoginPage();
                             }));
                           },
                           child: Text('Done'))
