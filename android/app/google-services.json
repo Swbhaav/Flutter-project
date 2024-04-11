@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "995098786301",
+    "project_id": "vadhyantram",
+    "storage_bucket": "vadhyantram.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995098786301:android:7d302a6a91d71eb6664194",
+        "android_client_info": {
+          "package_name": "com.example.vadhyantram"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC27s3IkEEhvLyZ-pV9540AVYTRbZGru5w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
