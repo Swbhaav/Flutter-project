@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
+import 'package:vadhyantram/login/signup.dart';
 import '../utils/constants/colors.dart';
 
 class LoginPage extends StatelessWidget {
@@ -30,29 +32,45 @@ class LoginPage extends StatelessWidget {
                 const Form(
                   child: Column(
                     children: [
+                      ///Email
                       TextField(
                         decoration: InputDecoration(
-                          hintText: 'UserName',
+                          iconColor: VColors.dark,
+                          prefixIcon: Icon(Iconsax.direct_right),
+                          hintText: 'Email',
                         ),
                       ),
                       SizedBox(height: 10),
+                      ///Password
                       TextField(
                         decoration: InputDecoration(
+                          iconColor: VColors.dark,
+                          prefixIcon: Icon(Iconsax.password_check),
                           hintText: 'Password',
+                          suffixIcon: Icon(Iconsax.eye_slash),
                         ),
                       ),
-                    ],
+
+                    ]
                   ),
                 ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: TextButton(
-                    onPressed: () {
-                      print('Clicked');
-                    },
-                    style: TextButton.styleFrom(foregroundColor: VColors.white),
-                    child: Text('Forgot Password'),
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Checkbox(value: false, onChanged: (value){}),
+                        const Text('Remember me'),
+                      ],
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        print('Clicked');
+                      },
+                      style: TextButton.styleFrom(foregroundColor: VColors.buttonPrimary),
+                      child: Text('Forgot Password'),
+                    ),
+                  ],
                 ),
                 const SizedBox(
                   height: 35,
@@ -82,7 +100,7 @@ class LoginPage extends StatelessWidget {
                         icon: const Image(
                           width: 24,
                           height: 24,
-                          image: AssetImage('assets/images/024-facebook.png'),
+                          image: AssetImage('assets/images/facebook.png'),
                         ),
                       ),
                     ),
@@ -98,7 +116,7 @@ class LoginPage extends StatelessWidget {
                         icon: Image(
                           width: 24,
                           height: 24,
-                          image: AssetImage('assets/images/OIP (1).jpg'),
+                          image: AssetImage('assets/images/google.png'),
                         ),
                       ),
                     ),
@@ -114,7 +132,9 @@ class LoginPage extends StatelessWidget {
                       style: Theme.of(context).textTheme.bodySmall,
                     ),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context){
+                          return Signup();
+                        }));},
                         style: TextButton.styleFrom(
                             foregroundColor: VColors.buttonPrimary),
                         child: Text('Signup'))
