@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:vadhyantram/login/signup.dart';
+import '../controllers/login_controller.dart';
 import '../utils/constants/colors.dart';
 
 class LoginPage extends StatelessWidget {
@@ -8,6 +10,8 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final LoginController loginController = Get.put(LoginController());
+    loginController.checkIfUserIsLoggedIn(context);
     return Scaffold(
       body: SingleChildScrollView(
         child: SizedBox(
@@ -29,20 +33,25 @@ class LoginPage extends StatelessWidget {
                   style: Theme.of(context).textTheme.bodySmall,
                 ),
                 const Spacer(),
-                const Form(
+                 Form(
                   child: Column(
                     children: [
                       ///Email
                       TextField(
+                        controller: loginController.usernameController,
+                        keyboardType: TextInputType.emailAddress,
                         decoration: InputDecoration(
                           iconColor: VColors.dark,
                           prefixIcon: Icon(Iconsax.direct_right),
                           hintText: 'Email',
                         ),
+
                       ),
                       SizedBox(height: 10),
                       ///Password
                       TextField(
+                        controller: loginController.passwordController,
+                        keyboardType: TextInputType.visiblePassword,
                         decoration: InputDecoration(
                           iconColor: VColors.dark,
                           prefixIcon: Icon(Iconsax.password_check),
@@ -78,7 +87,7 @@ class LoginPage extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () => Navigator.of(context).pushReplacementNamed('/Homepage'),
                     child: Text(
                       'Login To Continue',
                     ),

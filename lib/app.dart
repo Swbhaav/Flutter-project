@@ -1,7 +1,11 @@
 
 import 'package:flutter/material.dart';
+import 'package:vadhyantram/login/login_page.dart';
+import 'package:vadhyantram/login/signup.dart';
 import 'package:vadhyantram/on_boarding_screens/onboarding.dart';
 import 'package:vadhyantram/utils/Theme/theme.dart';
+
+import 'Pages/home_page.dart';
 
 
 ///This class is used to setup custom theme
@@ -16,6 +20,14 @@ class App extends StatelessWidget {
       theme: VAppTheme.lightTheme,
       darkTheme: VAppTheme.darkTheme,
       home:OnBoardingScreen(),
+      initialRoute: '/',
+      routes: {
+
+        '/Signup': (context) => Signup(),
+        '/Login': (context) => LoginPage(),
+        '/mainApp': (context) => App(),
+        '/Homepage': (context) => HomePage(),
+      },
     );
   }
 }
