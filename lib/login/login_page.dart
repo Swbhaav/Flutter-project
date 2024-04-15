@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:vadhyantram/Pages/app_routes.dart';
 import 'package:vadhyantram/login/signup.dart';
 import '../controllers/login_controller.dart';
 import '../utils/constants/colors.dart';

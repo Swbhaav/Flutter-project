@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:vadhyantram/Pages/home_page.dart';
 import 'package:vadhyantram/utils/constants/colors.dart';
 
-import 'login/profilePage/profile_page.dart';
+import 'profilePage/profile_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -17,7 +17,7 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: VColors.boarderSecondary,
       body: pages[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: [
