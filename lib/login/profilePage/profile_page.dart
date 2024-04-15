@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 enum ProfileMenu{
   edit,
   logout,
@@ -19,7 +18,7 @@ class ProfilePage extends StatelessWidget {
             onSelected: (value){
               switch (value){
                 case ProfileMenu.edit:
-                  Navigator.of(context).pushNamed('/editProfile');
+                  Navigator.of(context).pushReplacementNamed('/EditProfilePage');
                   break;
                 case ProfileMenu.logout:
                   print('Logout');

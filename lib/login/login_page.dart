@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:vadhyantram/Pages/app_routes.dart';
 import 'package:vadhyantram/login/signup.dart';
 import '../controllers/login_controller.dart';
 import '../utils/constants/colors.dart';
@@ -87,7 +88,7 @@ class LoginPage extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () => Navigator.of(context).pushReplacementNamed('/Homepage'),
+                    onPressed: () => Navigator.of(context).pushReplacementNamed('/main'),
                     child: Text(
                       'Login To Continue',
                     ),

@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,7 +16,17 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      
+      appBar: AppBar(
+        title: Text('Vadhyantram'),
+        actions: [
+          IconButton(
+              onPressed: (){},
+              icon: SvgPicture.asset('Assets/SVG/ic_location.svg'))
+        ],
+      ),
+      
+      
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
         child: Stack(
