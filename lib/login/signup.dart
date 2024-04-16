@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:vadhyantram/login/login_page.dart';
 
 class Signup extends StatelessWidget {
   Signup({super.key});
@@ -70,6 +69,7 @@ class Signup extends StatelessWidget {
                     TextFormField(
                       controller: _passwordController,
                       keyboardType: TextInputType.visiblePassword,
+                      obscureText: true,
                       decoration: InputDecoration(
                           labelText: 'Password',
                           prefixIcon: Icon(Iconsax.eye_slash)),
@@ -103,7 +103,7 @@ class Signup extends StatelessWidget {
                     TextFormField(
                       controller: _streetAddressController,
                       keyboardType: TextInputType.text,
-                      obscureText: true,
+                      obscureText: false,
                       decoration: InputDecoration(
                           labelText: 'Address',
                           prefixIcon: Icon(Iconsax.location)),
