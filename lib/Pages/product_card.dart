@@ -18,8 +18,11 @@ class ProductCard extends StatelessWidget {
       onTap: (){
         onTap();
       },
+
       child: Card(
+
       elevation: 2,
+
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
