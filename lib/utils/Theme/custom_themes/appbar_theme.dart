@@ -7,7 +7,7 @@ class VAppbarTheme{
 
   static const lightAppbarTheme = AppBarTheme(
     elevation: 0,
-    centerTitle: false,
+    centerTitle: true,
     scrolledUnderElevation: 0,
     backgroundColor: Colors.transparent,
     surfaceTintColor: Colors.transparent,
@@ -19,13 +19,14 @@ class VAppbarTheme{
 ///Dark theme for appbar
   static const darkAppbarTheme = AppBarTheme(
     elevation: 0,
-    centerTitle: false,
+    centerTitle: true,
     scrolledUnderElevation: 0,
     backgroundColor: Colors.transparent,
     surfaceTintColor: Colors.transparent,
     iconTheme: IconThemeData(color: VColors.black, size: 24),
     actionsIconTheme: IconThemeData(color: VColors.white, size: 26),
     titleTextStyle: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600, color: VColors.textWhite),
+
   );
 
 }

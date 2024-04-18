@@ -9,6 +9,7 @@ import 'Pages/home_page.dart';
 import 'main_page.dart';
 
 
+
 ///This class is used to setup custom theme
 class App extends StatelessWidget {
   const App({super.key});

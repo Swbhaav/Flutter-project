@@ -47,12 +47,12 @@ class ProfilePage extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.all(Radius.circular(20)),
-            child: Image.asset(
-              'Assets/Temp/pp.jpg',
-              width: 90,
-              height: 90,
+            child:
+              Image.network('https://th.bing.com/th/id/R.2df51c2821ca05a9a0376d24eca41678?rik=Vko2wPTLjpQOMg&pid=ImgRaw&r=0',
+                height: 100,
+                width: 100,),
+
             ),
-          ),
           SizedBox(
             height: 24,
           ),

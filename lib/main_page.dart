@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:vadhyantram/Pages/home_page.dart';
 import 'package:vadhyantram/utils/constants/colors.dart';
 
@@ -17,23 +18,21 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: VColors.boarderSecondary,
+
       body: pages[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
-              icon: SvgPicture.asset('Assets/SVG/ic_home.svg'), label: 'Home'),
+              icon:Icon(Iconsax.home), label: 'Home'),
+
           BottomNavigationBarItem(
-              icon: SvgPicture.asset('Assets/SVG/ic_favourite.svg'),
-              label: 'Favourite'),
+              icon:Icon(Iconsax.shop), label: 'Explore'),
           BottomNavigationBarItem(
-              icon: SvgPicture.asset('Assets/SVG/ic_messages.svg'),
-              label: 'Add'),
+              icon:Icon(Iconsax.heart), label: 'Wishlist'),
           BottomNavigationBarItem(
-              icon: SvgPicture.asset('Assets/SVG/ic_messages.svg'),
-              label: 'Message'),
+              icon:Icon(Iconsax.message), label: 'Notification'),
           BottomNavigationBarItem(
-              icon: SvgPicture.asset('Assets/SVG/ic_users.svg'), label: 'User')
+              icon:Icon(Iconsax.user), label: 'Profile'),
         ],
         currentIndex: currentIndex,
         onTap: (index) {
@@ -44,18 +43,19 @@ class _MainPageState extends State<MainPage> {
         type: BottomNavigationBarType.fixed,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        backgroundColor: VColors.white,
+        backgroundColor: Colors.amber,
       ),
     );
   }
 
   final pages = [
     HomePage(),
+
     Center(
-      child: Text('Favourite'),
+      child: Text('Explore'),
     ),
     Center(
-      child: Text('Add'),
+      child: Text('Favourite'),
     ),
     Center(
       child: Text('Notifications'),
