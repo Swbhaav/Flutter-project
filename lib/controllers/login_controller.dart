@@ -26,7 +26,7 @@ class LoginController extends GetxController{
   }
   //Function to handel login onPressed
   handleLogin(BuildContext context)async{
-    if(isChecked.value !=null){
+    if(isChecked.value != null){
       if(isChecked.value){
         final username = usernameController.text;
         final password = passwordController.text;
@@ -36,7 +36,7 @@ class LoginController extends GetxController{
           print('Login Successful');
           final SharedPreferences pref = await SharedPreferences.getInstance();
           await pref.setString('uId', user.uid);
-          Navigator.of(context).pushReplacementNamed('/mainApp');
+          Navigator.of(context).pushReplacementNamed('/Homepage');
         }else{
           print('Please check the terms');
         }
