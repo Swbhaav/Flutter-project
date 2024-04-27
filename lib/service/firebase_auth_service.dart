@@ -46,7 +46,7 @@ class FirebaseAuthService{
         completer.complete(null);
       }
     });
-    //retrun the future from the completer
+    //return the future from the completer
     return completer.future;
   }
 

@@ -104,110 +104,114 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             top: 180,
             left: 20,
             right: 20,
-            child: Column(
-              children: [
-                Container(
-                  height: 200,
-                  color: Colors.amber,
-                  child: TabBarView(
-                    controller: _tabController,
-                    children: [
-                      Column(
-                        children: [
-                          SizedBox(
+            bottom: 0,
+            
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Container(
+                    height: 200,
+                    color: Colors.amber,
+                    child: TabBarView(
+                      controller: _tabController,
+                      children: [
+                        Column(
+                          children: [
+                            SizedBox(
+                                height: 150,
+                                width: 360,
+                                child: ListView.builder(
+                                  itemCount: 6,
+                                  scrollDirection: Axis.horizontal,
+                                  itemBuilder: (context, index) {
+                                    return Container(
+                                      color: Colors.green,
+                                      width: 350,
+                                      height: 100,
+                                      child: Text('Container 1'),
+                                    );
+                                  },
+                                )),
+                            Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'Latest guitar',
+                                      style: TextStyle(
+                                          fontSize: 24,
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Text(
+                                      'Show All',
+                                      style: TextStyle(
+                                          fontSize: 24,
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            )
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Container(
                               height: 150,
-                              width: 360,
-                              child: ListView.builder(
-                                itemCount: 6,
-                                scrollDirection: Axis.horizontal,
-                                itemBuilder: (context, index) {
-                                  return Container(
-                                    color: Colors.green,
-                                    width: 350,
-                                    height: 100,
-                                    child: Text('Container 1'),
-                                  );
-                                },
-                              )),
-                          Column(
-                            children: [
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'Latest guitar',
-                                    style: TextStyle(
-                                        fontSize: 24,
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  Text(
-                                    'Show All',
-                                    style: TextStyle(
-                                        fontSize: 24,
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          )
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            height: 150,
-                            color: Colors.deepPurple,
-                          )
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            height: 150,
-                            color: Colors.indigo,
-                          )
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                SizedBox(height: 30,),
-                GridView.builder(
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      childAspectRatio: 0.8,
-                      crossAxisSpacing: 8,
-                      mainAxisSpacing: 4,
-                      mainAxisExtent: 288,
-
+                              color: Colors.deepPurple,
+                            )
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Container(
+                              height: 150,
+                              color: Colors.indigo,
+                            )
+                          ],
+                        )
+                      ],
                     ),
-                    itemCount: 4,
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemBuilder: (context, index) {
-                      return ProductCard(
-                          name: 'Gibson Guitar',
-                          imageUrl:
-                          'https://th.bing.com/th/id/OIP.leBWjrFWlWRw6HKH--eqXAHaHQ?rs=1&pid=ImgDetMain',
-                          price: 3000000,
-                          offerTag: '20% off',
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                    const ProductDescriptionPage()));
-                          });
-                    })
-
-
-              ],
+                  ),
+                  SizedBox(height: 30,),
+                  GridView.builder(
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        childAspectRatio: 0.8,
+                        crossAxisSpacing: 8,
+                        mainAxisSpacing: 4,
+                        mainAxisExtent: 288,
+              
+                      ),
+                      itemCount: 4,
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemBuilder: (context, index) {
+                        return ProductCard(
+                            name: 'Gibson Guitar',
+                            imageUrl:
+                            'https://th.bing.com/th/id/OIP.leBWjrFWlWRw6HKH--eqXAHaHQ?rs=1&pid=ImgDetMain',
+                            price: 3000000,
+                            offerTag: '20% off',
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                      const ProductDescriptionPage()));
+                            });
+                      })
+              
+              
+                ],
+              ),
             ),
           ),
         ],
